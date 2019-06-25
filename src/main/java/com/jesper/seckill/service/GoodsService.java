@@ -5,9 +5,9 @@ import com.jesper.seckill.exception.GlobalException;
 import com.jesper.seckill.mapper.GoodsMapper;
 import com.jesper.seckill.result.CodeMsg;
 import com.jesper.seckill.vo.GoodsVo;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.annotation.Resource;
 import java.util.List;
 
 /**
@@ -19,7 +19,7 @@ public class GoodsService {
     //乐观锁冲突最大重试次数
     private static final int DEFAULT_MAX_RETRIES = 5;
 
-    @Autowired
+    @Resource
     GoodsMapper goodsMapper;
 
     /**

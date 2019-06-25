@@ -11,6 +11,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import javax.annotation.Resource;
 import java.util.Date;
 
 /**
@@ -19,10 +20,10 @@ import java.util.Date;
 @Service
 public class OrderService {
 
-    @Autowired
+    @Resource
     OrderMapper orderMapper;
 
-    @Autowired
+    @Resource
     RedisService redisService;
 
     public SeckillOrder getOrderByUserIdGoodsId(long userId, long goodsId) {

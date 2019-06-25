@@ -13,6 +13,7 @@ import com.jesper.seckill.vo.LoginVo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.annotation.Resource;
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletResponse;
 
@@ -22,7 +23,7 @@ import javax.servlet.http.HttpServletResponse;
 @Service
 public class UserService {
 
-    @Autowired
+    @Resource
     UserMapper userMapper;
 
     @Autowired
